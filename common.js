@@ -5,7 +5,7 @@
 
 const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
   ? 'http://localhost:3000'
-  : '';
+  : 'https://fairway-production-0d25.up.railway.app';
 
 const PRODUCTS = [
   {id:13,cat:'goods',brand:'PEARLY GATES × Hello Kitty',name:'Hello Kitty Driver Head Cover',img:'pg_kitty_set',gallery:['pg_kitty_set','kitty_headcover','knit_headcover'],desc:'ハローキティ×パーリーゲイツ。マスコット型ドライバーヘッドカバー。',descLong:'PEARLY GATESとサンリオのコラボレーションによる限定ヘッドカバー。ゴルフクラブを持ったハローキティのぬいぐるみタイプで、ブラック×ピンクの配色がコースで映えます。首元にはPEARLY GATESロゴ入りニットソックが付属し、シャフトまでしっかり保護。ヘッドカバー単品でのお届けです。',price:18500,badge:'NEW',icon:null,specs:[['ブランド','PEARLY GATES × Hello Kitty'],['カラー','ブラック × ピンク'],['対応クラブ','ドライバー用（1W）'],['素材','ポリエステル・ニット'],['付属','ロゴ入りニットソック']],rating:4.9,reviews:[{user:'田中 M.',date:'2026.06.20',text:'キティちゃんが可愛すぎる！コースで目立ちます。'},{user:'佐藤 Y.',date:'2026.06.25',text:'思ったより大きくて存在感抜群です。'}]},
