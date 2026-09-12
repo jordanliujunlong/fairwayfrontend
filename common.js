@@ -117,6 +117,9 @@ const PRODUCT_IMAGES = new Proxy({
   vzn_2: 'vzn-2.jpg',
   df3i_1: 'df3i-1.jpg',
   df3i_2: 'df3i-2.jpg',
+    qi10_1: 'qi10_1.jpg',
+  qi10_2: 'qi10_2.jpg',
+  qi10_3: 'qi10_3.jpg',
 }, {
   get(target, prop) {
     const file = target[prop];
