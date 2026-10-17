@@ -291,6 +291,40 @@ const COMMON_CSS = `
   .btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px)}
   .btn-ghost{padding:.8rem 2rem;background:transparent;color:var(--cream);font-family:var(--font-ja);font-size:.82rem;letter-spacing:.12em;border:1px solid rgba(245,240,232,.25);cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  /* NAV scrolled state (index.html) */
+  nav{transition:padding .25s}
+  nav.scrolled{padding-top:.7rem;padding-bottom:.7rem}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  .nav-logo{flex-shrink:0;white-space:nowrap}
+  .nav-right{min-width:0}
+  .nav-btn.active .cart-badge,.nav-btn:hover .cart-badge{background:var(--black);color:var(--gold)}
+
+  /* ── TABLET: hide text links so the right side has room ── */
+  @media(max-width:900px){
+    nav{padding:.8rem max(1.2rem,env(safe-area-inset-right)) .8rem max(1.2rem,env(safe-area-inset-left))}
+    nav.scrolled{padding-top:.6rem;padding-bottom:.6rem}
+    .nav-links{display:none}
+  }
+
+  /* ── PHONE (iPhone 16 = 393px, Pro Max = 440px) ── */
+  @media(max-width:600px){
+    nav{padding:.55rem max(.75rem,env(safe-area-inset-right)) .55rem max(.75rem,env(safe-area-inset-left))}
+    nav.scrolled{padding-top:.45rem;padding-bottom:.45rem}
+    .nav-logo{font-size:1.3rem;letter-spacing:.12em}
+    .nav-right{gap:.4rem}
+    .lang-btn{padding:.42rem .45rem;font-size:.62rem;letter-spacing:.02em}
+    .lang-divider{height:12px}
+    .nav-btn{padding:0 .55rem;height:34px;min-width:34px;justify-content:center;gap:.25rem;font-size:.95rem;letter-spacing:0}
+    .nav-btn [data-i18n]{display:none}
+    #mypageNavBtn::before{content:'👤';font-size:.95rem;line-height:1}
+    #mypageNavBtn .user-dot{position:absolute;top:3px;right:3px;width:6px;height:6px}
+    .cart-badge{width:17px;height:17px;font-size:.58rem}
+    .page-wrap{padding-top:58px}
+  }
+  @media(max-width:350px){
+    .nav-logo{font-size:1.1rem;letter-spacing:.08em}
+    .lang-btn{padding:.4rem .35rem}
+  }
 `;
 
 // ── CSSを1回だけ注入 ──
